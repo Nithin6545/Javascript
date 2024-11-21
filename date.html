@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let d = new Date();
+    console.log(Date());
+    console.log(d.getDate());
+    console.log(d.getFullYear());
+    console.log(d.getDay());
+    console.log(d.getHours());
+    console.log(d.getMonth());
+    let dd = d.getDay();
+    let day = ['sunday','monday','tuesday','wednesday','thursday','friday','saturday']
+    console.log(day[dd]);
+    let y = d.getMonth();
+    let month = ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec']
+    console.log(month[y]);
+    console.log(`Date:${d.getDate()} Month:${month[y]} Year:${d.getFullYear()}`)
+    </script>
+</body>
+</html>
