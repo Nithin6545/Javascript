@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clicks</title>
+</head>
+<body>
+    <button id="a" onclick="f1()">click here</button>
+    <button id="b" ondblclick="f2()">double click here</button>
+    <button onmouseover="f3()" onmouseout="f4()">Hover Here</button>
+    <button onmousedown="f6()" onmouseup="f5()">UpDown</button>
+    <h1></h1>
+
+
+    <script>
+        function f1()
+        {
+            document.querySelector("h1").innerHTML="Clicked"
+        }
+        function f2()
+        {
+            document.querySelector("h1").innerHTML="Double Clicked"
+        }
+        function f3()
+        {
+            document.querySelector("h1").innerHTML="Hovered"
+        }
+        function f4()
+        {
+            document.querySelector("h1").innerHTML="NOT Hovered"
+        }
+        function f5()
+        {
+            document.querySelector("h1").innerHTML="down"
+        }
+        function f6()
+        {
+            document.querySelector("h1").innerHTML="up"
+        }
+
+
+
+
+    </script>
+</body>
+</html>
