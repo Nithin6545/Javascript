@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Destructuring</h1>
+    <p>destructuring is a process of unpacking the values from the array or object into the distinct variables.</p>
+    <p>2 types of destructuring</p>
+    <p>1:Array Destructuring : it is a process of unpacking the values from array into the distinct variables. <br>
+        Allows the programmer to access the data meaningfully from the array, without using the index. <br>
+        SYNTAX : let [val1,val2,val3...] = [value1,value2,value3 ....value n] <br> 
+        <br>
+    2:Object Destructuring <br>
+    object destructering is a process of unpacking the values from the object without using the object name. <br>
+    while destructuring the variables must be same as keys. <br> SYNTAX: let {id,name,place} = { id:1,name:"ram",place:"ayodhya"} </p>
+    <br>
+    <h1>Timing Functions</h1>
+    <p>Timing Functions are used to execute a piece of code in the required interval of the time or to execute after some delay. <br>
+        in javascript there are 4 timing functions <br>
+        1: setInterval()  2:clearInterval() 3:setTimeout() 4:clearTimeout() <br>
+        setInterval(), clearInterval()
+       <br> setInterval() is used to execute a piece of js code continuously for a given interval of time. <br>
+       it accept 2 arguments that is callback, time. setInterval(callback,time)</p>
+    
+
+
+
+
+
+
+
+    <script>
+        let x = [a,b,c] = [10,20,30]
+        console.log(a);
+        console.log(b);
+        console.log(c);
+        let [z=90,w=9] = [10,40]
+        console.log(z);
+            
+        function arith(x,y)
+        {
+            let sum = x+y;
+            let minus = x-y;
+            let mul = x*y;
+            return [sum,minus,mul]
+        }
+        let [sum,,minus,mul] = arith(10,5)
+        console.log(sum,minus,mul);
+//object Destructuring
+
+        let obj={
+            id:1,
+            name:"ram",
+            place:"ayodhya"
+        }
+        console.log(obj.id);
+        console.log(obj.name);
+
+            let {id,name,place} = obj
+            console.log(id);
+            console.log(name);
+            console.log(place);
+
+        let obj1 = {
+            id:30,
+            name:"gopi",
+            address:{
+                state:"Karnataka",
+                nation:"India"
+            }
+        }
+
+        let {id1,name1,address:{state,nation}}=obj1
+        console.log(id1);
+        console.log(name1);
+        console.log(state);
+        console.log(nation);
+        
+        
+        
+        
+            
+            
+            
+        
+        
+
+        
+
+    </script>
+</body>
+</html>

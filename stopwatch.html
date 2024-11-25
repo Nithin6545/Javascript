@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StopWatch</title>
+</head>
+<body>
+<button id="st" onclick="f1()">Start</button>
+<br><br>
+<button id="sp" onclick="f2()">Stop</button>
+<br><br>
+<button id="rs" onclick="f3()">Reset</button>
+
+    <script>
+        let count = 0;
+        let interval = 0;
+
+        function f1() {
+            if (!interval) {  
+                interval = setInterval(() => {
+                    count += 1;
+                    console.log(count);
+                }, 1000); 
+            }
+        }
+        function f2() {
+            clearInterval(interval);
+            interval = null;
+        }
+        function f3() {
+            count = 0;
+            console.log(count);
+        }
+    </script>
+</body>
+</html>
