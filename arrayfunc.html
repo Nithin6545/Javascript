@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArrayFunctions</title>
+</head>
+<body>
+    <script>
+    let a = [2,3,6,4,7,3,34,5,22]
+        let x = a.map((q)=>q**2)
+        console.log(x);
+    let even = a.filter((q)=>q%2==0)
+        console.log(even);
+    let sum = a.reduce((a,b)=>a+b,0)
+        console.log(sum);
+    let greater = a.filter((a)=>a>10)
+        console.log(greater);
+    function dobsum(a){
+           let d = a.map((x)=>x*2)
+            let s = d.reduce((a,b)=>a+b,0)
+            return s
+    }   
+    console.log(dobsum(a));
+      
+        let arst = ['qwew','fdgfh','hygfsw','fdhgsseq'] 
+        function arrayOfStrings(a){
+                return a.map((x)=>x.indexOf(x))
+        }
+        console.log(arrayOfStrings(arst));
+      
+        let o = ['a','w','e','a','a','e','w','e']
+        function occ(a){
+                return a.reduce((x,y)=>{
+                    x[y] = (x[y] || 0) + 1;
+                    return x;
+                },{})
+        }
+        console.log(occ(o));
+        
+        function rm(a){
+                return a.reduce((x,y)=>{
+                    if(!x.includes(y)){
+                        x.push(y);
+                    }
+                    return x
+                },[])
+        }
+        console.log(rm(o));
+        
+        
+        
+    </script>
+</body>
+</html>

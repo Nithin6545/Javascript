@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<body>
+    <form action="" onsubmit="f1(event)">
+        <input type="text" placeholder="Username" id="u">
+        <p></p>
+        <input type="text" placeholder="Password" id="p">
+        <p></p>
+        <br>
+        <button>Submit</button>
+    </form>
+
+
+    <script>
+       function f1(event){
+                    event.preventDefault()
+                   let user =  document.querySelector("#u")
+                   let pass = document.querySelector("#p")
+                   console.log(user,pass);
+                   let y = document.getElementsByTagName("input")
+                   if(user.value=="")
+                   {
+                       let x = document.querySelectorAll("p")
+                       x[0].innerHTML="Enter Username"
+
+                       
+                   }
+                   else if(pass.value=="") {
+                    let x = document.querySelectorAll("p")
+                        x[1].innerHTML="Enter Password"
+                   }
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local and Session Storage</title>
+</head>
+<body>
+    <form action="" onsubmit="f2(event)">
+        <input type="text" placeholder="Username" id="u">
+        <p></p>
+        <input type="text" placeholder="Password" id="p">
+        <p></p>
+        <br>
+        <button>Submit</button>
+    </form>
+
+    <script>
+        
+        function f1(event){
+            event.preventDefault()
+            let user = document.getElementById("u")
+            let pass = document.getElementById("p")
+            if(user.value=="" || pass.value=="")
+        {
+            alert("Enter all Details")
+        }
+        else{
+            localStorage.setItem("username",user.value)
+            localStorage.setItem("password",pass.value)
+            alert("Details Submitted")
+        }
+        }  
+        //let a = localStorage.getItem("username") 
+        //localStorage.removeItem("mypass")
+        //localStorage.clear()
+
+        function f2(event){
+            event.preventDefault()
+            let secuser = document.getElementById("mymail")
+            let secpass = document.getElementById("mypass")
+            let user = document.getElementById("u")
+            let pass = document.getElementById("p")
+            if(user.value=="" || pass.value=="")
+        {
+            alert("Enter all Details")
+        }
+        else if(user.value===secuser.value && pass.value===secpass)
+        {
+
+            window.open("login.html")
+        }
+        else
+        alert("Invalid data")
+        }
+        let a = sessionStorage.getItem("username")
+        console.log(a);
+        
+        </script>
+</body>
+</html>
