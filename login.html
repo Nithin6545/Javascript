@@ -7,5 +7,42 @@
 </head>
 <body>
     <h1>Login Page</h1>
+
+    <form action="" onsubmit="f2(event)">
+        <input type="text" placeholder="Username" id="u">
+        <p></p>
+        <input type="text" placeholder="Password" id="p">
+        <p></p>
+        <br>
+        <button>Submit</button>
+    </form>
+
+    <script>
+
+        function f2(event){
+            event.preventDefault()
+            
+            let user = document.getElementById("u").value
+            let pass = document.getElementById("p").value
+
+            const secuser = localStorage.getItem("username");
+            const secpass = localStorage.getItem("password");
+
+
+            if(user.value=="" || pass.value=="")
+        {
+            alert("Enter all Details")
+        }
+        else if(user===secuser && pass===secpass)
+        {
+
+            alert("Login Success")
+        }
+        else
+        alert("Invalid username or password")
+        }
+        let a = sessionStorage.getItem("username")
+        console.log(a);
+    </script>
 </body>
 </html>
